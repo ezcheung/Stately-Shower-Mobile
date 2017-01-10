@@ -5,7 +5,7 @@
  */
 
 import React, { Component } from 'react';
-import * as firebase from 'firebase';
+import App from './src/components/app';
 import {
   AppRegistry,
   StyleSheet,
@@ -13,31 +13,10 @@ import {
   View
 } from 'react-native';
 
-// Initialize Firebase
-const config = {
-  apiKey: "AIzaSyDU3qympK0n7Ts6ZsgRB2CqE39fUu_W2I8",
-  authDomain: "stately-shower.firebaseapp.com",
-  databaseURL: "https://stately-shower.firebaseio.com",
-  storageBucket: "stately-shower.appspot.com",
-  messagingSenderId: "507309554511"
-};
-const firebaseApp = firebase.initializeApp(config);
-
 export default class statelyshowermobile extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.android.js
-        </Text>
-        <Text style={styles.instructions}>
-          Double tap R on your keyboard to reload,{'\n'}
-          Shake or press menu button for dev menu
-        </Text>
-      </View>
+      <App/>
     );
   }
 }
